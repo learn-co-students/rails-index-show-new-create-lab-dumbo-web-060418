@@ -1,0 +1,12 @@
+<h1>Update Coupon</h1>
+
+<%= form_tag coupon_path(@coupon) do %>
+  <label>Store:</label><br>
+  <%= text_field_tag :'coupon[store]', @coupon.store %> <br>
+
+  <label>Coupon Code:</label><br>
+  <%= text_field_tag :'coupon[coupon_code]', @coupon.coupon_code %> <br>
+
+  <%= button_to "Update Coupon", "/coupons/#{@coupon.id}", method: :patch %>
+  <%= button_to "Delete Coupon", "/coupons/#{@coupon.id}", method: :delete %>
+<% end %>
