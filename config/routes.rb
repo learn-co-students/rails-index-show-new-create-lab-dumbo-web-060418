@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+      get '/coupons', to: 'coupons#index'
+      get '/coupons/new', to: 'coupons#new'
+      get '/coupons/:id', to: 'coupons#show', as: 'coupon'
+      post '/coupons/new', to: 'coupons#create', as: 'new_coupon'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
